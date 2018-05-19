@@ -1,0 +1,29 @@
+{
+  "name": "yarn-scripts-boilerplate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "autoprefixer": "postcss -u autoprefixer -r dist/css/*.css",
+    "scss:dev": "mkdir -p dist/css && node-sass --source-map-embed true -o dist/css src/scss",
+    "scss:build": "mkdir -p dist/css && node-sass --output-style compressed -o dist/css src/scss",
+    "css:dev": "yarn run scss:dev && yarn run autoprefixer",
+    "css:build": "yarn run scss:build && yarn run autoprefixer",
+    "js:dev": "mkdir -p dist/js && babel src/js/*.js -o dist/js/script.js --source-maps inline",
+    "js:build": "mkdir -p dist/js && babel src/js/*.js -o dist/js/script.js --minified",
+    "watch:css": "onchange 'src/scss/*.scss' -- yarn run css:dev",
+    "watch:js": "onchange 'src/js/*.js' -- yarn run js:dev",
+    "dev": "run-p watch:css watch:js",
+    "build": "yarn run css:build && yarn run js:build",
+    "postinstall": "mkdir -p dist && npm run build"
+  },
+  "dependencies": {
+    "autoprefixer": "^8.5.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "node-sass": "^4.9.0",
+    "onchange": "^4.0.0",
+    "postcss-cli": "^5.0.0",
+    "yarn-run-all": "^3.1.1"
+  }
+}
