@@ -6,7 +6,8 @@
   "scripts": {
     "autoprefixer": "postcss -u autoprefixer -r dist/css/*.css",
     "images": "mkdir -p dist/images && imagemin src/images/* -o=dist/images",
-    "scss:dev": "mkdir -p dist/css && node-sass --source-map-embed true -o dist/css src/scss",
+    "scsslint": "sass-lint -c .sass-lint.yml '**/*.scss' -v -q",
+    "scss:dev": "mkdir -p dist/css && npm run scsslint && node-sass --source-map-embed true -o dist/css src/scss",
     "scss:build": "mkdir -p dist/css && node-sass --output-style compressed -o dist/css src/scss",
     "css:dev": "yarn run scss:dev && yarn run autoprefixer",
     "css:build": "yarn run scss:build && yarn run autoprefixer",
@@ -26,6 +27,7 @@
     "node-sass": "^4.9.0",
     "onchange": "^4.0.0",
     "postcss-cli": "^5.0.0",
+    "sass-lint": "^1.12.1",
     "yarn-run-all": "^3.1.1"
   }
 }
