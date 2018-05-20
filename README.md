@@ -9,6 +9,7 @@ Contains the following tasks:
 * SCSS sourcemaps
 * CSS autoprefixing
 * ES6 support
+* JS linting
 * JS sourcemaps
 * Image minification
 * SVG icon sprites
@@ -26,5 +27,4 @@ Contains the following tasks:
 
 ## TODO
 
-* ES6 linting
 * Git pre-commit build hook
