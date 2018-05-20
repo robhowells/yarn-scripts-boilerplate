@@ -24,7 +24,3 @@ Contains the following tasks:
 * JS minification
 * Image minification
 * SVG icon sprites
-
-## TODO
-
-* Git pre-commit build hook
