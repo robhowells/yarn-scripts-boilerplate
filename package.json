@@ -16,7 +16,7 @@
     "js:build": "mkdir -p dist/js && babel src/js/*.js -o dist/js/script.js --minified",
     "watch:css": "onchange 'src/scss/*.scss' -- yarn run css:dev",
     "watch:js": "onchange 'src/js/*.js' -- yarn run js:dev",
-    "dev": "run-p watch:css watch:js",
+    "dev": "run-p watch:css watch:js images icons",
     "build": "run-p css:build js:build images icons",
     "postinstall": "mkdir -p dist && npm run build"
   },
