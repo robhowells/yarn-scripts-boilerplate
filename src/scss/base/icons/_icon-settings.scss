@@ -1,0 +1,8 @@
+* {
+  &[class^='svg-icon'] {
+    overflow: hidden;
+    text-indent: 200%;
+    white-space: nowrap;
+    display: inline-block;
+  }
+}

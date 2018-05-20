@@ -1,0 +1,18 @@
+%svg-common {
+	background: url("../icons/svg-b4eeb0cc.svg") no-repeat;
+}
+
+.svg-icon-codepen {
+	@extend %svg-common;
+	background-position: 0 0;
+	width: 23px;
+	height: 23px;
+}
+
+.svg-icon-github {
+	@extend %svg-common;
+	background-position: 100% 0;
+	width: 23px;
+	height: 23px;
+}
+
