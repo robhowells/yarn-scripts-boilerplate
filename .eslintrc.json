@@ -1,0 +1,12 @@
+{
+  "env": {
+    "es6": true
+  },
+  "rules": {
+      "indent": ["warn", 2],
+      "quotes": ["warn", "single"],
+      "no-console": "warn",
+      "semi": ["warn", "always"],
+      "space-infix-ops": ["warn", {"int32Hint": false}]
+  }
+}
